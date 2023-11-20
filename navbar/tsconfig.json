@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "declarationDir": "dist"
   },
-  "files": ["src/single-spa-mfe-navbar.tsx"],
+  "files": ["src/mfe-navbar.tsx"],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
 }

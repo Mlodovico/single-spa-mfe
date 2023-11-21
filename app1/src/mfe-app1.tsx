@@ -13,4 +13,25 @@ const lifecycles = singleSpaReact({
   },
 });
 
-export const { bootstrap, mount, unmount } = lifecycles;
+const { bootstrap: _bootstrap, mount: _mount, unmount: _unmount } = lifecycles;
+
+export const bootstrap = (props) => {
+  return Promise.resolve().then(() => {
+    console.log(props.name, "Bootstrap")
+    _bootstrap(props);
+  })
+}
+
+export const mount = (props) => {
+  return Promise.resolve().then(() => {
+    console.log(props.name, "mount")
+    _mount(props);
+  })
+}
+
+export const unmount = (props) => {
+  return Promise.resolve().then(() => {
+    console.log(props.name, "unmount")
+    _unmount(props);
+  })
+}
